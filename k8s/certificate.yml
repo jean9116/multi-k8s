@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: jalvaradopruebas-website-tls
+spec:
+  secretName: jalvaradopruebas-website
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: jalvaradopruebas.website
+  dnsNames:
+    - jalvaradopruebas.website
+    - www.jalvaradopruebas.website
