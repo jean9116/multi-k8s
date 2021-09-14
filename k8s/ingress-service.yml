@@ -13,7 +13,7 @@ spec:
     - hosts:
         - jalvaradopruebas.website
         - www.jalvaradopruebas.website
-      secretName: yourdomain-com
+      secretName: jalvaradopruebas-website
   rules:
     - host: jalvaradopruebas.website
       http:
