@@ -10,9 +10,4 @@ before_install:
   - gcloud config set compute/zone devops
   - gcloud auth activate-service-account --devops
   - gcloud config set project devops
-  - gcloud config set compute/zone us-central1-devops ###Se agrego comentarios para devops####
-
-
-  ####Se agrego el ingress controller###
-
-### se agregar un pull request###
+  - gcloud config set compute/zone us-central1-devops ###Se agrego comentarios para devops###
