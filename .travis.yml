@@ -18,3 +18,8 @@ before_install:
 
 
   ####Se agrego el ingress controller###
+
+
+
+ ### Estas cosas son de dev solo DEV
+ ### esto es solo de dev
