@@ -23,10 +23,6 @@ script:
 deploy:
   provider: script
   script: bash ./deploy.sh
-<<<<<<< HEAD
-=======
-#Esto es una prueba para validar sino elimina algun archivo deberia estar travis copy en dev
->>>>>>> devops
   on:
     branch: ##esto es un test para dev ##
 ---
