@@ -13,8 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project noble-stratum-311404
   - gcloud config set compute/zone us-central1-c
-
-
+  ###Se agrego comentarios para devops####
 
 
   ####Se agrego el ingress controller###
