@@ -13,9 +13,4 @@ before_install:
   - gcloud config set compute/zone us-central1-devops ###Se agrego comentarios para devops####
 
 
-  ####Se agrego el ingress controller###
-
-
-
- ### Estas cosas son de dev solo DEV
- ### esto es solo de dev
+ 
