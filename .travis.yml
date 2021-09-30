@@ -24,5 +24,4 @@ deploy:
   provider: script
   script: bash ./deploy.sh
   on:
-    branch: ##esto es un test  ## esto es un testa para ver que cambia en dev
----
+    branch: ##esto es un test  ##se agrego a  COCO.TXT
