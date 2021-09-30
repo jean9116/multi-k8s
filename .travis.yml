@@ -13,15 +13,8 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project noble-stratum-311404
   - gcloud config set compute/zone us-central1-c
-  - gcloud container clusters get-credentials jalvarado-test
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run -e CI=true stephengrider/react-test npm test
 
-deploy:
-  provider: script
-  script: bash ./deploy.sh
-  on:
-    branch: esto es un test  ## esto es un testa para ver que cambia en dev y se agrega COCO
+
+
+  ####Se agrego el ingress controller###
