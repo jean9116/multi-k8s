@@ -1,0 +1,10 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: k8s-gce-ssl-cert
+spec:
+  domains:
+    - app.devops.nicovitagenia.com
+    - app1.devops.nicovitagenia.com
+    - app2.devops.nicovitagenia.com
+    

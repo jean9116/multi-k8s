@@ -1,0 +1,43 @@
+apiVersion: networking.gke.io/v1beta1
+kind: FrontendConfig
+metadata:
+ name: redirect-k8s-gce
+spec:
+ redirectToHttps:
+   enabled: true
+   responseCodeName: PERMANENT_REDIRECT
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-k8s
+  annotations:
+    kubernetes.io/ingress.class: gce
+    networking.gke.io/managed-certificates: k8s-gce-ssl-cert
+    ingress.kubernetes.io/force-ssl-redirect: "true"
+    networking.gke.io/v1beta1.FrontendConfig: "redirect-k8s-gce"
+    
+spec:
+  rules:
+  - host: app.devops.nicovitagenia.com
+    http:
+      paths:
+      - backend:
+          serviceName: hello-k8s-gce
+          servicePort: 80
+        path: /*
+  - host: app1.devops.nicovitagenia.com
+    http:
+      paths:
+      - backend:
+          serviceName: app1-nginx-clusterip-service
+          servicePort: 80
+        path: /app1/*
+  - host: app2.devops.nicovitagenia.com
+    http:
+      paths:
+      - backend:
+          serviceName: app2-nginx-clusterip-service
+          servicePort: 80
+        path: /app2/*
